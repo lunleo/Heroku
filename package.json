@@ -5,12 +5,16 @@
   "main": "scripts.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+	"dev": "nodemon scripts.js"
+    
   },
   "engines": {
     "node": "12.19.0"
   },
   "author": "",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
