@@ -5,10 +5,10 @@ const pool = new Pool({
   user:'uamxqgajqulevs',
   password: '099ac5d682028ea4c1c0f8f93236101fc4f03e1db21e21335743a7ed1f6b5d25',
   port: 5432,
-  ssl:{rejectUnauthorized:false}
+  ssl:{rejectUnauthorized:false},
 })
 const getUsers = (request, response) => {
-  pool.query('SELECT * FROM users ORDER BY id ASC', (error, results) => {
+  pool.query('SELECT * FROM public.users ORDER BY id ASC', (error, results) => {
     if (error) {
       throw error
     }
@@ -19,19 +19,13 @@ const getUsers = (request, response) => {
 const getUserById = (request, response) => {
   const id = parseInt(request.params.id)
 
-  pool.query('SELECT * FROM users WHERE id = $1', [id], (error, results) => {
+  pool.query('SELECT * FROM public.users WHERE id = $1', [id], (error, results) => {
     if (error) {
       throw error
     }
     response.status(200).json(results.rows)
   })
 }
-
-
-
-
-
-
 
 module.exports = {
   getUsers,
