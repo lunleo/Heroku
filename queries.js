@@ -1,29 +1,26 @@
 const Pool = require('pg').Pool;
 const pool = new Pool({
- host: 'ec2-54-246-85-151.eu-west-1.compute.amazonaws.com',
-  database: 'dcs7tllo89a6ek',
-  user:'uamxqgajqulevs',
-  password: '099ac5d682028ea4c1c0f8f93236101fc4f03e1db21e21335743a7ed1f6b5d25',
-  port: 5432,
-  ssl:{rejectUnauthorized:false},
+  host: 'ec2-3-226-231-4.compute-1.amazonaws.com',
+  database: 'd87qe1ge4bh6p0',
+  user: 'prumjdhhfboptn',
+  password: '66473cd755bbf65b9d203205e8f8abe8e84439d6e9c6e0bab175bf3b833722f8',
+  port: 5432, 
+  ssl: {rejectUnauthorized: false}
 })
-const getUsers = (request, response) => {
-  pool.query('SELECT * FROM public.users ORDER BY id ASC', (error, results) => {
-    if (error) {
-      throw error
-    }
-    response.status(200).json(results.rows)
+
+const getUsers = (req, res) => {
+  pool.query('SELECT * FROM public.users', (err, data) => {
+    if (err) {throw err}
+    res.status(200).json(data.rows)
   })
 }
 
-const getUserById = (request, response) => {
-  const id = parseInt(request.params.id)
+const getUserById = (req, res) => {
+  const id = parseInt(req.params.id)
+  pool.query('SELECT * FROM public.users WHERE id = $1', [id], (err, data) => {
+    if (err) {throw err}
+    res.status(200).json(data.rows)
 
-  pool.query('SELECT * FROM public.users WHERE id = $1', [id], (error, results) => {
-    if (error) {
-      throw error
-    }
-    response.status(200).json(results.rows)
   })
 }
 

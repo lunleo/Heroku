@@ -1,21 +1,20 @@
 {
-  "name": "pgs",
+  "name": "tries",
   "version": "1.0.0",
   "description": "",
   "main": "scripts.js",
   "scripts": {
-    "start": "node index.js",
-	"dev": "nodemon scripts.js"
-    
+    "start": "node scripts.js",
+    "dev": "nodemon scripts.js"
   },
   "engines": {
-    "node": "12.19.0"
+    "node": "v10.19.0"
   },
   "author": "",
+  "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.6"
   },
-  "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
     "pg": "^8.4.1",
