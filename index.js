@@ -11,7 +11,6 @@ app.use(
   })
 )
 
-
 app.get('/users', db.getUsers)
 app.get('/users/:id', db.getUserById)
 app.use(express.static("base"));

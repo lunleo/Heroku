@@ -8,11 +8,6 @@ const pool = new Pool({
   ssl:{rejectUnauthorized:false},
 })
 
-
-app.get('/', (request, response) => {
-  response.json({ info: 'Node.js, Express, and Postgres API' })
-})
-
 const getUsers = (request, response) => {
   pool.query('SELECT * FROM public.users ORDER BY id ASC', (error, results) => {
     if (error) {
