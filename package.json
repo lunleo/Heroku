@@ -1,24 +1,19 @@
 {
-  "name": "tries",
+  "name": "pgs",
   "version": "1.0.0",
   "description": "",
-  "main": "scripts.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node scripts.js",
-    "dev": "nodemon scripts.js"
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
-    "node": "v10.19.0"
+    "node": "12.19.0"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^2.0.6"
-  },
   "dependencies": {
     "express": "^4.17.1",
-    "pg": "^8.4.1",
-    "pgp": "^0.1.0",
-    "pgsql": "^1.0.0"
+    "pg": "^8.4.1"
   }
 }
