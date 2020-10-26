@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded",
     const content=document.getElementById("content");
     btn.onclick=()=>{
        $ajaxUtils
-          .sendGetRequest(`https://reqres.in/api/users/${counter}`, 
+          .sendGetRequest(`https://leonidlunin-practice8.herokuapp.com/users/${counter}`, 
             (request) => {
               const data = (JSON.parse(request.responseText));
               first_name.innerHTML=data.data.first_name;
