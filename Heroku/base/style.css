@@ -1,0 +1,106 @@
+*{
+    font-family: Verdana, Geneva, sans-serif;
+}
+button {
+    font-size: inherit;
+    background-color: inherit;
+    border: none;
+    margin: 0;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+.all{
+    width: 70%;
+    margin: 0 auto;
+} 
+
+.header{
+    display: flex;
+    
+}
+
+.photo{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+   }
+
+.photo > img{
+    margin: auto;
+    max-width: 75%;
+    max-height: 75%;
+    border-radius: 50%;
+ }
+
+.header-right{
+    width: 70%
+}
+
+.Name #first_name{
+   color: #e84c3d;
+   
+}
+
+.myinfo{
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .contact span{
+    color: #e84c3d;
+    margin-right: 10px;
+ }
+ 
+hr{
+    border: 1px solid #e84c3d;
+}
+
+.MainBlock{
+    display: flex;
+    margin:0px;    
+}
+
+.Title{
+    width: 26%;
+    padding: 20px;
+    color: #e84c3d;
+    text-align: right;
+    
+}
+
+.Content{
+    width: 70%;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.Content li{
+    margin-top: 20px;
+}
+
+.Content span{
+    display: block;
+    text-align: right;
+    margin-top: -20px;
+}
+
+h3{
+   
+    margin-bottom: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+.Text{
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 20px;
+}
