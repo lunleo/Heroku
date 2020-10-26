@@ -1,0 +1,123 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+
+p,h1,h2,span, a, h5{
+	color: #1a448d;
+	font-family: 'Peddana', serif;
+}
+
+.name{
+	text-align: center;
+	margin-top: 15px;
+	vertical-align: middle;
+	border-top: 2px solid #1a448d;
+	border-bottom: 4px solid #1a448d;
+	margin-left: 10%;
+	margin-right: 10%;
+	height: 75px;
+}
+
+h1 {
+	font-size: 75px;
+	margin-top: -17px;
+}
+
+.my_info{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+p{
+	margin-left: 25px;
+}
+a{
+	text-decoration: none;
+	font-size: 18px;
+}
+img{
+	display: block;
+	border-radius: 50%;
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#asd{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	text-align: center;
+	font-size: 30px;
+	color: #1a448d;
+}
+
+.block{
+	margin-top: 12px;
+}
+
+.Education{
+	margin-top: -43px;
+	text-align: center;
+}
+
+.Education > a{
+	font-size: 45px;
+	background-color: white;
+}
+
+
+.about{
+	display: flex;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: -20px;
+}
+.time > p, .where > p{
+	color: black;
+	font-size: 20px;
+}
+.time{
+	width: 200px;
+}
+
+.where{
+	margin-left: 250px;
+}
+
+.skills{
+	width: 600px;
+	margin-top: -25px;
+}
+.skills > p{
+	color: black;
+	margin-left: 0;
+}
+.go{
+	margin-left: 10%;
+	margin-right: 10%;
+	display: flex;
+	justify-content: space-between;
+}
+.more{
+	font-size: 25px;
+}
+.shi{
+	font-size: 18px;
+}
+
+h1:hover,h2:hover,h3:hover,p:hover,a:hover, #asd:hover{
+	color: blue;
+	transition: 0.2s;
+}
+
+img:hover{
+	height: 200px;
+	transition: 0.3s;
+	border: 3px solid blue;
+}
