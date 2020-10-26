@@ -16,22 +16,13 @@ document.addEventListener("DOMContentLoaded",
           .sendGetRequest(`https://leonidlunin-practice8.herokuapp.com/users/${counter}`, 
             (request) => {
               const data = (JSON.parse(request.responseText));
-              first_name.innerHTML=data.data.first_name;
-              last_name.innerHTML=' ' + data.data.last_name;
-              image.src=data.data.avatar;
-              email.innerHTML=data.data.email;
+              first_name.innerHTML=data.first_name;
+              last_name.innerHTML=' ' + data.last_name;
+              image.src=data.avatar;
+              email.innerHTML=data.email;
               Job.innerHTML='Experience';
-              const company_name=data.ad.company;
-              const url=data.ad.url;
-              const text=data.ad.text;
-              content.innerHTML=`
-                <ul>
-                    <li>${company_name} <span><a href="${url}">${url}</a></span></li>
-                    <div class="Text">${text}</div>
-                </ul>
-                                `;
-            
-              if (counter==12){
+              
+            if (counter==12){
                   counter=0;
               }
               counter++;
