@@ -10,7 +10,7 @@ const pool = new Pool({
 
 const getUsers = (request, response) => {
     response.set('Access-Control-Allow-Origin', '*')
-  pool.query('SELECT * FROM public.users', (error, results) => {
+  pool.query('SELECT * FROM "public".users', (error, results) => {
     if (error) {
       throw error
     }
@@ -22,7 +22,7 @@ const getUserById = (request, response) => {
     response.set('Access-Control-Allow-Origin', '*')
   const id = parseInt(request.params.id)
 
-  pool.query('SELECT * FROM public.users WHERE id = $1', [id], (error, results) => {
+  pool.query('SELECT * FROM "public".users WHERE id = $1', [id], (error, results) => {
     if (error) {
       throw error
     }
