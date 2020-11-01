@@ -19,7 +19,6 @@ const getUsers = (request, response) => {
 }
 
 const getUserById = (request, response) => {
-    response.set('Access-Control-Allow-Origin', '*')
   const id = parseInt(request.params.id)
 
   pool.query('SELECT * FROM "public".users WHERE id = $1', [id], (error, results) => {
