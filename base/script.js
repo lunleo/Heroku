@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded",
     
     btn.onclick=()=>{
        $ajaxUtils
-          .sendGetRequest("https://leonidlunin-practice8.herokuapp.com/users/1", 
+          .sendGetRequest("https://nodejs-serv.herokuapp.com/users/1", 
             (request) => {
               const data = (JSON.parse(request.responseText));
               first_name.innerHTML=data.first_name;
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded",
               image.src=data.avatar;
               email.innerHTML=data.email;
               Job.innerHTML='Experience';
-              
+              console.log(data);
             if (counter==12){
                   counter=0;
               }
