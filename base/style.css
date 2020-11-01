@@ -104,3 +104,9 @@ li{
     margin-top: 20px;
     padding-top: 20px;
 }
+
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
