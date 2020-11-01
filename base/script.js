@@ -9,25 +9,24 @@ document.addEventListener("DOMContentLoaded",
     const image=document.getElementById("image");
     const email=document.getElementById("email");
     const company_name=document.getElementById("company_name");
-    
+    const Job=document.getElementById("Job");
+    const content=document.getElementById("content");
     btn.onclick=()=>{
        $ajaxUtils
-          .sendGetRequest("https://nodejs-serv.herokuapp.com/users/1", 
+          .sendGetRequest(`https://leonidlunin-practice8.herokuapp.com/users/${counter}`, 
             (request) => {
-              const data = (JSON.parse(request.responseText));
+              const data = (JSON.parse(request.responseText))[0];
               first_name.innerHTML=data.first_name;
               last_name.innerHTML=' ' + data.last_name;
+              //image.src=data.avatar;
               image.src=data.avatar;
               email.innerHTML=data.email;
-              Job.innerHTML='Experience';
-              console.log(data);
-            if (counter==12){
+                  
+              if (counter==12){
                   counter=0;
               }
               counter++;
               
             });
-            
-            
-   }
+    }
   });
